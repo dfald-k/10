@@ -1,0 +1,10 @@
+a = int(input("значение a: "))
+b = int(input("значение b: "))
+m = random.randint(0, 20)
+n = random.randint(0, 20)
+print(f"Случайное число m (неотрицательное не превышает 20): {m}")
+print(f"Случайное число n (неотрицательное не превышает 20): {n}")
+integers_in_range = [random.randint(a, b) for _ in range(n)]
+print("целые числа в диапазоне от a до b:", integers_in_range)
+float_numbers = [random.uniform(0, n) for _ in range(m)]
+print("вещественные числа не превышающие n:", float_numbers)
