@@ -1,0 +1,20 @@
+import random
+def simulate_coin_flips(n):
+    results = [random.randint(0, 1) for _ in range(n)]
+    count_zero = results.count(0)
+    count_one = results.count(1)
+    rel_freq_zero = count_zero / n
+    rel_freq_one = count_one / n
+    return rel_freq_zero, rel_freq_one
+
+# для 100
+freq_100 = simulate_coin_flips(100)
+print(f"При 100 подбрасываниях:")
+print(f"Относительная частота 0: {freq_100[0]:.2f}")
+print(f"Относительная частота 1: {freq_100[1]:.2f}")
+
+# для 1000
+freq_1000 = simulate_coin_flips(1000)
+print(f"\nПри 1000 подбрасываний:")
+print(f"Относительная частота 0: {freq_1000[0]:.2f}")
+print(f"Относительная частота 1: {freq_1000[1]:.2f}")
