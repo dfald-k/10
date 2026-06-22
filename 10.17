@@ -1,0 +1,8 @@
+import random
+domino_set = [(i, j) for i in range(7) for j in range(i, 7)]
+k1, k2 = random.sample(domino_set, 2)
+print(f"Выбранные кости: {k1} и {k2}")
+can_connect = False
+if k1[0] == k2[0] or k1[0] == k2[1] or k1[1] == k2[0] or k1[1] == k2[1]:
+    can_connect = True
+print(f"можно соединить кости? {'Да' if can_connect else 'Нет'}")
